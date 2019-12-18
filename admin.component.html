@@ -1,0 +1,24 @@
+<div style="text-align:center">
+    <h1>
+      Welcome Admin!
+    </h1>
+    <p>
+      <button (click)="logout()">
+        Logout
+      </button>
+    </p>
+    
+  </div>
+  
+  <h1>Users</h1>
+
+<ul>
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+      <li><a href="http://{{ user.website }}">{{ user.website }}</a></li>
+    </ul>
+  </li>
+</ul>
